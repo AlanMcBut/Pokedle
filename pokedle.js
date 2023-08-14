@@ -1,5 +1,7 @@
 function elegirPokemon() {
     numeroPokeElegido = Math.round(Math.random() * 151 + 1 )
-    return console.log(numeroPokeElegido)
+    const eleccion = listaPokemon.find((el) =>  el.id === numeroPokeElegido)
+    
+    return console.log(eleccion)
 }
 elegirPokemon();
