@@ -18,8 +18,8 @@ function eleccionUsuario() {
         }
         else {
             alert('Incorrecto! Intenta otra vez:')
-           
-        }
+      }
+
     }
 }
 eleccionUsuario();
