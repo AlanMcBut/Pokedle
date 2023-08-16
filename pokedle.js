@@ -16,7 +16,7 @@ function eleccionUsuario() {
 
     while (!juegoCompletado) {
         let respuestaUsuario = prompt('Ingrese un pokemon: ');
-        respuestaUsuario = listaPokemon.find((el) => el.nombre === respuestaUsuario);
+        respuestaUsuario = listaPokemon.find((el) => el.nombre === respuestaUsuario.toLowerCase());
         mostrarPokemon(respuestaUsuario);
         
         
@@ -26,7 +26,7 @@ function eleccionUsuario() {
             juegoCompletado = true;
         }
         else {
-            
+            mostrarPokemon(respuestaUsuario);
             pokemonInfo.style.backgroundColor = 'red';
             alert('Incorrecto! Intenta otra vez:')
       }

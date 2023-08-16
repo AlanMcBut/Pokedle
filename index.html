@@ -6,20 +6,72 @@
     <title>Pokedle</title>
     <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
 
-
-
 </head>
 
 <body>
+
+    <style>
+        
+        body {
+          background-color: red;
+          background-image: url("https://www.pngarts.com/files/3/Ash-Ketchum-PNG-Photo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center; 
+          display: flex;
+          align-items: center;
+          min-height: 105vh;
+         
+        }
+        .navbar {
+      position: fixed; 
+      top: 0;
+      width: 100%; 
+      z-index: 1; 
+    }
+    
+    .container {
+      margin-left: 20px;
+      z-index: 2;
+      position: relative;
+    
+    }
+      
+      </style>
+    
+    
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+
+            <img src="https://fontmeme.com/temporary/64bdb5224f00c3ed864e2fda0dd03811.png" alt="Pokedle" width="400" height="100">
+          </a>
+        </div>
+      </nav>
+    
     <div class="container">
         <h1>Pokedle</h1>
         <h2>Adivina el pokemon del dia!</h2>
         <button id="startGame" class="btn btn-primary">Empezar</button>
         <script> let boton = document.getElementById('startGame') 
-        boton.addEventListener('click', respuestaClick)
+        
+        
+        boton.addEventListener('click', respuestaClick);
+
+    
+
+
+
+        
+        
+        
         function respuestaClick(){
             eleccionUsuario()
         } </script>
+    
+
+
+
     </div>
     
     
