@@ -12,7 +12,7 @@ class pokemon {
 }
 
 const listaPokemon = [
-    new pokemon (1, 'bulbasaur', 'veneno','-'),
+    new pokemon (1, 'bulbasaur', 'planta','veneno'),
     new pokemon (2, 'ivysaur','planta', 'veneno'),
     new pokemon (3, 'venusaur', 'planta', 'veneno'),
     new pokemon (4, 'charmander', 'fuego', 'none'),
