@@ -25,15 +25,14 @@ function eleccionUsuario() {
         
         
         if(respuestaUsuario.id === eleccion.id){
-            alert('Adivinaste el pokemon, felicitaciones!');
-            pokemonInfo.style.backgroundColor = 'green';
+            alert(`Adivinaste el pokemon, felicitaciones!`);
             juegoCompletado = true;
         }
         else {
-            mostrarPokemon(respuestaUsuario);
-            pokemonInfo.style.backgroundColor = 'red';
-            alert('Incorrecto! Intenta otra vez:')
-      }
+            localStorage.getItem('intentos') ? localStorage.setItem('intentos',parseInt(localStorage.getItem('intentos'))+1): localStorage.setItem('intentos',1);
+            alert('Incorrecto! Intenta otra vez:');
+       }
+      
 
     }
 }
@@ -42,9 +41,13 @@ function mostrarPokemon(respuestaUsuario) {
     const pokemonInfo = document.getElementById('pokemonInfo');
     pokemonInfo.innerHTML = `
       <h3>Información del Pokémon</h3>
-      <p>Nombre: ${respuestaUsuario.nombre}</p>
-      <p>1er tipo: ${respuestaUsuario.tipo1}</p>
-      <p>2do tipo: ${respuestaUsuario.tipo2}</p>
+      <p>Nombre: ${primerMayuscula(respuestaUsuario.nombre)}</p>
+      <p>1er tipo: ${primerMayuscula(respuestaUsuario.tipo1)}</p>
+      <p>2do tipo: ${primerMayuscula(respuestaUsuario.tipo2)}</p>
     `;
 }
 // eleccionUsuario();
+
+function primerMayuscula(el) {
+    return el.charAt(0).toUpperCase() + el.slice(1);
+  }
