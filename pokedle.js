@@ -1,3 +1,7 @@
+// Aqui se encuentra la logica del programa
+
+
+
 function elegirPokemon() {
     numeroPokeElegido = Math.floor(Math.random() * 151 + 1 )
     const eleccion = listaPokemon.find((el) =>  el.id === numeroPokeElegido)
