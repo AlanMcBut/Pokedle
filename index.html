@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedle</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
 
 
 
 </head>
 
 <body>
-    <h1>Pokedle</h1>
+    <div class="container">
+        <h1>Pokedle</h1>
+        <h2>Adivina el pokemon del dia!</h2>
+        <button id="startGame" class="btn btn-primary">Empezar</button>
+        <script> let boton = document.getElementById('startGame') 
+        boton.addEventListener('click', respuestaClick)
+        function respuestaClick(){
+            eleccionUsuario()
+        } </script>
+        </div>
+    
+    
+    
 
-    <h2>Adivina el pokemon del dia!</h2>
 
 
 
 
  <script src="pokedex.js"></script>
- <script src="pokedle.js"></script>   
+ <script src="pokedle.js"></script>  
+ <script src="./Bootstrap/js/bootstrap.min.js"></script> 
 </body>
 </html>

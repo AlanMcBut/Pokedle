@@ -22,4 +22,4 @@ function eleccionUsuario() {
 
     }
 }
-eleccionUsuario();
+// eleccionUsuario();
